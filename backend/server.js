@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require('body-parser');
 const router = require("./Routes/user.Route");
+const routerCV = require("./Routes/CV.Route");
 const http = require('http');
 
 
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const server = http.createServer(app);
 
 app.use("/user", router);
+app.use("/cv", routerCV);
 mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
