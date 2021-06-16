@@ -1,0 +1,99 @@
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: "Varela Round";
+}
+
+nav, nav ul{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 30px 50px 20px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: lightgray;
+}
+
+nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  color: black;
+}
+
+nav .logo {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: black;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li  {
+  font-size: 14px;
+  margin-left: 15px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+}
+
+.Nav_link:link {
+  color: #fff;
+  text-decoration: none;
+}
+.Nav_link:visited {
+  color: black;
+}
+.Nav_link:hover {
+  color: rgb(199, 116, 116);
+}
+.Nav_link:active {
+  color: rgb(199, 116, 116);
+}
+.loginbtn:link {
+  color: #fff;
+  text-decoration: none;
+}
+.loginbtn:visited {
+  color: black;
+}
+.button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}

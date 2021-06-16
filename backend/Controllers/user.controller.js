@@ -26,16 +26,15 @@ const Login = async (req, res, next) => {
   try {
 
       const isMatch = await bcrypt.compare(Password, user.Password);
-
+      console.log(isMatch)
       if (!isMatch) {
         return res
           .status(400)
           .json({ errors: [{ msg: 'Not Allowed' }] });
       }
-      else{
-        return res.json(user);}
-  } catch {
-    return res.json(500).send();
+      else{return res.json(user);}
+  } catch (error) {
+    next(error);
   }
 };
 

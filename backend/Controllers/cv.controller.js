@@ -54,14 +54,14 @@ const updateCV = async (req, res) => {
 
   if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No CV Found ! ');
 
-  const updatedCV = { _id: id };
-  const updatedInfos = { Nom, Prenom, Email, Tel, _id: updatedCV.idUser };
+  const doc = await CVModel.findById(req.params.id);
+  const updatedInfos = { Nom, Prenom, Email, Tel, _id: doc.idUser };
 
   await Promise.all([
     CVModel.findByIdAndUpdate(id, {$set:{"formation.$.nom":nomFormation,"formation.$.Ecole":Ecole}}),
-    UserModel.findByIdAndUpdate(updatedCV.idUser, updatedInfos, { new: true }),
+    UserModel.findByIdAndUpdate(doc.idUser, updatedInfos, { new: true }),
   ]);
-  res.json(updatedCV);
+  res.json(updatedInfos);
 };
 
 
