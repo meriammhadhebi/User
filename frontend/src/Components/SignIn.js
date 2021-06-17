@@ -31,7 +31,7 @@ export default function SignIn() {
   //*************add Product*************
   const Submit = (e) => {
     axios
-      .post("http://localhost:4000/user", UserData)
+      .post("http://localhost:4000/user/SignUp", UserData)
       .then(function (response) {
         setUser(response.data);
         history.push("/");

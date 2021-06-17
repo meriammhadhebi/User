@@ -18,13 +18,14 @@ function SignUp() {
       console.log("email" + loginData.Email);
       console.log("pwd" + loginData.Password);
       await axios
-        .get("http://localhost:4000/user", {
+        .post("http://localhost:4000/user/SignIn", {
           Email: loginData.Email,
           Password: loginData.Password,
         })
         .then(function (response) {
           setData(response.data);
           console.log(response);
+          history.push("/");
         });
     }
     setloginFlag(false);
