@@ -11,7 +11,7 @@ function SignUp() {
     Password: "",
   });
   const history = useHistory();
-  //*************add Product*************
+  //*************add User*************
   const [loginFlag, setloginFlag] = useState(false);
   useEffect(async () => {
     if (loginFlag) {
